@@ -1,0 +1,11 @@
+@media (min-width: 576px) {
+  .btn-responsive {
+    display: none;
+  }
+}
+
+.card-img-top {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+}

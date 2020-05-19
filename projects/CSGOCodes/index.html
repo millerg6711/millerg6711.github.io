@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/semantic.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+</head>
+
+<body class="pushable">
+    <div class="ui teal left demo vertical inverted sidebar labeled icon menu">
+        <a href="/" class="item">
+            <i class="home icon"></i> Home
+        </a>
+        <a href="/faq.html" class="item">
+            <i class="help circle icon"></i> FAQ
+        </a>
+        <a href="/privacy.html" class="item">
+            <i class="lock icon"></i> Privacy
+        </a>
+        <a href="/contact.html" class="item">
+            <i class="mail icon"></i> Contact
+        </a>
+    </div>
+
+    <div class="pusher">
+        <div id="particles-js">
+            <canvas height="651" width="1366" style="width: 100%; height: 100%;"></canvas>
+        </div>
+        <div class="top_bar xs-hidden"></div>
+        <div class="ui container">
+
+            <div class="ui large inverted secondary demo menu">
+
+                <a class="item sidebar-toggle"><i class="sidebar icon"></i> Menu</a>
+
+                <div class="right menu">
+                    <div class="item">
+                        <iframe allowtransparency="true" frameborder="0" scrolling="no"
+                            src="//platform.twitter.com/widgets/follow_button.html?screen_name=csgocod_es"
+                            style="width:205px; height:20px;"
+                            class="twitter-follow-button twitter-follow-button"></iframe>
+                        <a class="twitter-share-button twitter" href="http://twitter.com/share"
+                            data-text="Win Free Skins At CSGOCodes.com!" data-url="http://csgocod.es"
+                            data-via="csgocod_es">
+                        </a>
+                        <script type="text/javascript">
+                            window.twttr = (function (d, s, id) {
+                                var t, js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) {
+                                    return
+                                }
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "https://platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                                return window.twttr || (t = {
+                                    _e: [],
+                                    ready: function (f) {
+                                        t._e.push(f)
+                                    }
+                                })
+                            }(document, "script", "twitter-wjs"));
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="ui bottom attached">
+
+
+                <div class="ui inverted secondary menu">
+                    <div class="item">
+                        <div class="ui inverted transparent large action input">
+                            <input type="text" class="quicksearch" placeholder="Search..." name="search" value="">
+                            <div class="ui green icon button"><i class="search icon"></i></div>
+                        </div>
+                    </div>
+                    <div class="item"><button class="green ui inverted icon button" id="shuffle"><i
+                                class="random icon"></i></button></div>
+                    <div class="right item"><button class="green ui inverted labeled icon button" id=""><i
+                                class="gift icon"></i>Daily Rewards</button></div>
+                    <div class="item">
+                        <div class="green ui inverted floating labeled icon dropdown button">
+                            <i class="sort icon"></i>
+                            <span class="text">Sort By</span>
+                            <div id="sorts" class="menu">
+                                <div data-sort-by="original-order" class="active item"><i
+                                        class="checkmark box icon"></i> All</div>
+                                <div data-sort-by="number" class="item"><i class="sort numeric descending icon"></i>
+                                    Hi-Low</div>
+                                <div data-sort-by="name" class="item"><i class="sort alphabet ascending icon"></i>
+                                    Alphabetical</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="green ui inverted floating labeled icon dropdown button">
+                            <i class="game icon"></i>
+                            <span class="text">Gamemodes</span>
+                            <div id="filters-select" class="menu">
+                                <div class="header">
+                                    <i class="tags icon"></i> Filter by tag
+                                </div>
+                                <div class="divider"></div>
+                                <div data-filter="*" class="active item">
+                                    <i class="checkmark box icon"></i> All
+                                </div>
+                                <div data-filter=".roulette" class="item">
+                                    <i class="life ring icon"></i> Roulette
+                                </div>
+                                <div data-filter=".jackpot" class="item">
+                                    <i class="money icon"></i> Jackpot
+                                </div>
+                                <div data-filter=".crash" class="item">
+                                    <i class="line chart icon"></i> Crash
+                                </div>
+                                <div data-filter=".dice" class="item">
+                                    <i class="cubes icon"></i> Dice
+                                </div>
+                                <div data-filter=".cases" class="item">
+                                    <i class="suitcase icon"></i> Cases
+                                </div>
+                                <div data-filter=".coin" class="item">
+                                    <i class="circle icon"></i> Coin Flip
+                                </div>
+                                <div data-filter=".mines" class="item">
+                                    <i class="bomb icon"></i> Mines
+                                </div>
+                                <div data-filter=".bj" class="item">
+                                    <i class="users icon"></i> Blackjack
+                                </div>
+                                <div data-filter=".match" class="item">
+                                    <i class="television icon"></i> Match Betting
+                                </div>
+                                <div data-filter=".wheel" class="item">
+                                    <i class="spinner icon"></i> Spin wheel
+                                </div>
+                                <div data-filter=".matchmaking" class="item">
+                                    <i class="crosshairs icon"></i> Matchmaking
+                                </div>
+                                <div data-filter=".slots" class="item">
+                                    <i class="ellipsis horizontal icon"></i> Slots
+                                </div>
+                                <div data-filter=".poker" class="item">
+                                    <i class="life ring icon"></i> Poker
+                                </div>
+                                <div data-filter=".horses" class="item">
+                                    <i class="options icon"></i> Horses
+                                </div>
+                                <div data-filter=".rps" class="item">
+                                    <i class="hand scissors icon"></i> Rock Paper Scissors
+                                </div>
+                                <div data-filter=".plinko" class="item">
+                                    <i class="building icon"></i> Plinko
+                                </div>
+                                <div data-filter=".scratch" class="item">
+                                    <i class="ticket icon"></i> Scratch Cards
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden ui clearing divider"></div>
+                <div class="link ui fluid cards isotope">
+                    <div class="ui fluid card element-item roulette">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgoempire.com/r/ccodes">CSGO Empire</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgoempire.com/r/ccodes" target="_blank">
+                            <img src="/static/imgs/logos/logo3.png">
+                        </a>
+                        <div class="btn ui green animated attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>1.00</span>
+                            <a class="name header right floated" href="https://www.greenhunt.gg/promo-code/695931"
+                                target="_blank">Greenhunt</a>
+                        </div>
+                        <a class="ui fluid image" href="https://www.greenhunt.gg/promo-code/695931" target="_blank">
+                            <img src="/static/imgs/logos/logo58.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="695931" tabindex="0"><i
+                                class="linkify icon"></i>695931</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette">
+
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>5.00</span>
+                            <a class="name header right floated" href="#">CSGO Exclusive</a>
+                        </div>
+                        <a class="ui fluid image" href="https://www.csgoexclusive.com" target="_blank">
+                            <img src="/static/imgs/logos/logo1.png">
+                        </a>
+                        <div class="btn ui green animated attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette crash">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://csgoroll.com/promo/CSGOCodes">CSGO
+                                Roll</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgoroll.com/promo/CSGOCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo2.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot cases coin rps">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgobig.com/" target="_blank">CSGO
+                                Big</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgobig.com/" target="_blank">
+                            <img src="/static/imgs/logos/logo4.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny brown label"><i class="hand scissors icon"></i> Rock Paper
+                                    Scissors</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin crash dice bj">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>1.00</span>
+                            <a class="name header right floated" href="https://csgoatse.com/"
+                                target="_blank">CSGOatse</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgoatse.com/" target="_blank">
+                            <img src="/static/imgs/logos/logo5.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                                <a class="ui tiny black label"><i class="users icon"></i> Blackjack</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette crash dice">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://society.gg/#/bust?ref=CSGOCodes"
+                                target="_blank">Society.gg</a>
+                        </div>
+                        <a class="ui fluid image" href="https://society.gg/#/bust?ref=CSGOCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo6.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot crash dice mines">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://csgobounty.com/#/r/CSGOCodes"
+                                target="_blank">CSGO Bounty</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgobounty.com/#/r/CSGOCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo7.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                                <a class="ui tiny grey label"><i class="bomb icon"></i> Mines</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette coin crash dice match">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://bets.gg/" target="_blank">Bets.gg</a>
+                        </div>
+                        <a class="ui fluid image" href="https://bets.gg/" target="_blank">
+                            <img src="/static/imgs/logos/logo8.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                                <a class="ui tiny label"><i class="television icon"></i> Match Betting</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette crash dice mines">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://skinup.gg" target="_blank">SkinUP</a>
+                        </div>
+                        <a class="ui fluid image" href="https://skinup.gg" target="_blank">
+                            <img src="/static/imgs/logos/logo9.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                                <a class="ui tiny grey label"><i class="bomb icon"></i> Mines</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette crash mines">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://csgocasino.net" target="_blank">CSGO
+                                Casino</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgocasino.net" target="_blank">
+                            <img src="/static/imgs/logos/logo10.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny grey label"><i class="bomb icon"></i> Mines</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot cases coin crash bj match slots scratch">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgospeed.com/recruits"
+                                target="_blank">CSGO Speed</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgospeed.com/recruits" target="_blank">
+                            <img src="/static/imgs/logos/logo11.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="84D01CE925" tabindex="0"><i
+                                class="linkify icon"></i>84D01CE925</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny black label"><i class="users icon"></i> Blackjack</a>
+                                <a class="ui tiny label"><i class="television icon"></i> Match Betting</a>
+                                <a class="ui tiny purple label"><i class="ellipsis horizontal icon"></i> Slots</a>
+                                <a class="ui tiny olive label"><i class="ticket icon"></i> Scratch Cards</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item crash wheel">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.10</span>
+                            <a class="name header right floated" href="http://www.csgowheel.com/earn-coins"
+                                target="_blank">CSGO Wheel</a>
+                        </div>
+                        <a class="ui fluid image" href="http://www.csgowheel.com/earn-coins" target="_blank">
+                            <img src="/static/imgs/logos/logo12.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny violet label"><i class="spinner icon"></i> Spin Wheel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>1.00</span>
+                            <a class="name header right floated" href="https://csgo.best/#free-credits"
+                                target="_blank">CSGO.BEST</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgo.best/#free-credits" target="_blank">
+                            <img src="/static/imgs/logos/logo13.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://emerald.gg"
+                                target="_blank">EMERALD.GG</a>
+                        </div>
+                        <a class="ui fluid image" href="https://emerald.gg" target="_blank">
+                            <img src="/static/imgs/logos/logo14.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://skinhub.com/rewards"
+                                target="_blank">Skinhub</a>
+                        </div>
+                        <a class="ui fluid image" href="https://skinhub.com/rewards" target="_blank">
+                            <img src="/static/imgs/logos/logo15.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette crash dice">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.20</span>
+                            <a class="name header right floated" href="https://skinshoot.net"
+                                target="_blank">Skinshoot</a>
+                        </div>
+                        <a class="ui fluid image" href="https://skinshoot.net" target="_blank">
+                            <img src="/static/imgs/logos/logo16.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://extracases.net/" target="_blank">Extra
+                                Cases</a>
+                        </div>
+                        <a class="ui fluid image" href="https://extracases.net/" target="_blank">
+                            <img src="/static/imgs/logos/logo17.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.10</span>
+                            <a class="name header right floated" href="https://csgodouble.gg/"
+                                target="_blank">CSGODouble</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgodouble.gg/" target="_blank">
+                            <img src="/static/imgs/logos/logo18.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin bj">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://www.csgoarena.gg/ref/259297"
+                                target="_blank">CSGO Arena</a>
+                        </div>
+                        <a class="ui fluid image" href="https://www.csgoarena.gg/ref/259297" target="_blank">
+                            <img src="/static/imgs/logos/logo19.png">
+                        </a>
+                        <a class="btn ui green attached button" href="https://www.csgoarena.gg/ref/259297"
+                            target="_blank">csgoarena.gg/ref/259297</a>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny black label"><i class="users icon"></i> Blackjack</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://captainskin.com/affiliate"
+                                target="_blank">Captain Skin</a>
+                        </div>
+                        <a class="ui fluid image" href="https://captainskin.com/affiliate" target="_blank">
+                            <img src="/static/imgs/logos/logo20.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="ui green ribbon label"><i class="dollar icon"></i>Free Case</span>
+                            <a class="name header right floated" href="https://caserandom.com/p/id76561198262828662"
+                                target="_blank">Caserandom</a>
+                        </div>
+                        <a class="ui fluid image" href="https://caserandom.com/p/id76561198262828662" target="_blank">
+                            <img src="/static/imgs/logos/logo21.png">
+                        </a>
+                        <a class="btn ui green attached button" href="https://caserandom.com/p/id76561198262828662"
+                            target="_blank">caserandom.com/p/id7656...</a>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui fluid card element-item roulette matchmaking">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://challengeskins.com/"
+                                target="_blank">Challenge Skins</a>
+                        </div>
+                        <a class="ui fluid image" href="https://challengeskins.com/" target="_blank">
+                            <img src="/static/imgs/logos/logo22.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny grey label"><i class="crosshairs icon"></i> Matchmaking</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin bj dice">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgoblackjack.com/?rf=KIGR73MU"
+                                target="_blank">CSGO Blackjack</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgoblackjack.com/?rf=KIGR73MU" target="_blank">
+                            <img src="/static/imgs/logos/logo23.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="KIGR73MU" tabindex="0"><i
+                                class="linkify icon"></i>KIGR73MU</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny black label"><i class="users icon"></i> Blackjack</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette coin dice">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgobooth.com/" target="_blank">CSGO
+                                Booth</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgobooth.com/" target="_blank">
+                            <img src="/static/imgs/logos/logo24.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot cases coin crash dice mines slots scratch">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgo-case.com/code/"
+                                target="_blank">CSGO-Case</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgo-case.com/code/" target="_blank">
+                            <img src="/static/imgs/logos/logo25.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                                <a class="ui tiny grey label"><i class="bomb icon"></i> Mines</a>
+                                <a class="ui tiny black label"><i class="users icon"></i> Blackjack</a>
+                                <a class="ui tiny purple label"><i class="ellipsis horizontal icon"></i> Slots</a>
+                                <a class="ui tiny olive label"><i class="ticket icon"></i> Scratch Cards</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://csgocircle.com/r/CSGOCodes"
+                                target="_blank">CSGO Circle</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgocircle.com/r/CSGOCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo26.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette crash horses">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgo-derby.com/Affiliate.aspx"
+                                target="_blank">CSGO Derby</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgo-derby.com/Affiliate.aspx" target="_blank">
+                            <img src="/static/imgs/logos/logo27.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny brown label"><i class="options icon"></i> Horses</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot cases coin dice">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://www.csgocoinflip.com/affiliates.php"
+                                target="_blank">CSGO Coinflip</a>
+                        </div>
+                        <a class="ui fluid image" href="https://www.csgocoinflip.com/affiliates.php" target="_blank">
+                            <img src="/static/imgs/logos/logo28.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item jackpot coin">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://csgoduck.com/#ref/zccqqi"
+                                target="_blank">CSGO Duck</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgoduck.com/#ref/zccqqi" target="_blank">
+                            <img src="/static/imgs/logos/logo29.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="zccqqi" tabindex="0"><i
+                                class="linkify icon"></i>zccqqi</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette mines wheel match">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://csgofirewheel.com/ref/CCODES"
+                                target="_blank">CSGOFireWheel</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgofirewheel.com/ref/CCODES" target="_blank">
+                            <img src="/static/imgs/logos/logo30.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny grey label"><i class="bomb icon"></i> Mines</a>
+                                <a class="ui tiny violet label"><i class="spinner icon"></i> Spin Wheel</a>
+                                <a class="ui tiny label"><i class="television icon"></i> Match Betting</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>$1.00</span>
+                            <a class="name header right floated" href="http://csgofp.com/affiliates/CCodes"
+                                target="_blank">CSGO Fairplay</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgofp.com/affiliates/CCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo31.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item jackpot dice">
+                        <div class="extra content">
+                            <span class="ui green ribbon label"><i class="dollar icon"></i>Free Case</span>
+                            <a class="name header right floated"
+                                href="https://csgohandouts.com/?r=58bb13fb2cac9b01d7f37eb6" target="_blank">CSGO
+                                Handouts</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgohandouts.com/?r=58bb13fb2cac9b01d7f37eb6"
+                            target="_blank">
+                            <img src="/static/imgs/logos/logo32.png">
+                        </a>
+                        <a class="btn ui green attached button"
+                            href="https://csgohandouts.com/?r=58bb13fb2cac9b01d7f37eb6"
+                            target="_blank">csgohandouts.com/?r=5...</a>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item horses">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://csgohorseracing.com/redeem.php"
+                                target="_blank">CSGO Horce Racing</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgohorseracing.com/redeem.php" target="_blank">
+                            <img src="/static/imgs/logos/logo33.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny brown label"><i class="options icon"></i> Horses</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin crash dice">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgohype.com/freecoins"
+                                target="_blank">CSGO Hype</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgohype.com/freecoins" target="_blank">
+                            <img src="/static/imgs/logos/logo34.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.40</span>
+                            <a class="name header right floated" href="https://www.csgolive.com/affiliates"
+                                target="_blank">CSGO Live</a>
+                        </div>
+                        <a class="ui fluid image" href="https://www.csgolive.com/affiliates" target="_blank">
+                            <img src="/static/imgs/logos/logo35.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgoloto.com/" target="_blank">CSGO
+                                Loto</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgoloto.com/" target="_blank">
+                            <img src="/static/imgs/logos/logo36.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette dice">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.25</span>
+                            <a class="name header right floated" href="https://csgomiami.com/#free-credits"
+                                target="_blank">CSGO Miami</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgomiami.com/#free-credits" target="_blank">
+                            <img src="/static/imgs/logos/logo37.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny orange label"><i class="cubes icon"></i> Dice</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin crash mines bj rps">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgomassive.com/" target="_blank">CSGO
+                                Massive</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgomassive.com/" target="_blank">
+                            <img src="/static/imgs/logos/logo38.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="U0HZX5" tabindex="0"><i
+                                class="linkify icon"></i>U0HZX5</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny grey label"><i class="bomb icon"></i> Mines</a>
+                                <a class="ui tiny black label"><i class="users icon"></i> Blackjack</a>
+                                <a class="ui tiny brown label"><i class="hand scissors icon"></i> Rock Paper
+                                    Scissors</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item poker">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://csgopoker.com/#" target="_blank">CSGO
+                                Poker</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgopoker.com/#" target="_blank">
+                            <img src="/static/imgs/logos/logo39.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny pink label"><i class="life ring icon"></i> Poker</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.10</span>
+                            <a class="name header right floated" href="http://csgoSwapper.com/?r=ccodes"
+                                target="_blank">CSGO Swapper</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgoSwapper.com/?r=ccodes" target="_blank">
+                            <img src="/static/imgs/logos/logo40.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item mines">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://csgotower.com" target="_blank">CSGO
+                                Tower</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgotower.com" target="_blank">
+                            <img src="/static/imgs/logos/logo41.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny grey label"><i class="bomb icon"></i> Mines</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin mines">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgotune.com/#/settings"
+                                target="_blank">CSGO Tune</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgotune.com/#/settings" target="_blank">
+                            <img src="/static/imgs/logos/logo42.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="76561198262828662" tabindex="0">
+                            <i class="linkify icon"></i>76561198262828662</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny grey label"><i class="bomb icon"></i> Mines</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.60</span>
+                            <a class="name header right floated" href="https://www.drakemoon.com/promo-code/CCodes"
+                                target="_blank">DrakeMoon</a>
+                        </div>
+                        <a class="ui fluid image" href="https://www.drakemoon.com/promo-code/CCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo43.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://farmskins.com/ref-csgocodes"
+                                target="_blank">Farmskins</a>
+                        </div>
+                        <a class="ui fluid image" href="http://farmskins.com/ref-csgocodes" target="_blank">
+                            <img src="/static/imgs/logos/logo44.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item matchmaking">
+                        <div class="extra content">
+                            <span class="ui green ribbon label"><i class="dollar icon"></i>Rubies</span>
+                            <a class="name header right floated" href="http://kickback.com/invite/CSGOCodes"
+                                target="_blank">Kickback</a>
+                        </div>
+                        <a class="ui fluid image" href="http://kickback.com/invite/CSGOCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo45.png">
+                        </a>
+                        <a class="btn ui green attached button" href="http://kickback.com/invite/CSGOCodes"
+                            target="_blank">kickback.com/invite/CSG...</a>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny grey label"><i class="crosshairs icon"></i> Matchmaking</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://kuycase.com/bonus-csgocodes"
+                                target="_blank">Kuycase</a>
+                        </div>
+                        <a class="ui fluid image" href="https://kuycase.com/bonus-csgocodes" target="_blank">
+                            <img src="/static/imgs/logos/logo46.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item crash">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://olimp.us/r/CCodes"
+                                target="_blank">Olimp.us</a>
+                        </div>
+                        <a class="ui fluid image" href="https://olimp.us/r/CCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo47.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item coin">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://wager.gg/r/CCodes"
+                                target="_blank">Wager.gg</a>
+                        </div>
+                        <a class="ui fluid image" href="https://wager.gg/r/CCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo48.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="Ccodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot crash slots">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.20</span>
+                            <a class="name header right floated" href="https://csgopeanut.com" target="_blank">CSGO
+                                Peanut</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgopeanut.com" target="_blank">
+                            <img src="/static/imgs/logos/logo49.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny purple label"><i class="ellipsis horizontal icon"></i> Slots</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin crash">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://battlego.net/ref/i/csgocodes/"
+                                target="_blank">BattleGO</a>
+                        </div>
+                        <a class="ui fluid image" href="http://battlego.net/ref/i/csgocodes/" target="_blank">
+                            <img src="/static/imgs/logos/logo50.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot coin">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://www.csgoboss.com/free-tokens"
+                                target="_blank">CSGO Boss</a>
+                        </div>
+                        <a class="ui fluid image" href="http://www.csgoboss.com/free-tokens" target="_blank">
+                            <img src="/static/imgs/logos/logo51.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item jackpot coin crash mines">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgojustice.com/user/settings"
+                                target="_blank">CSGO Justice</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgojustice.com/user/settings" target="_blank">
+                            <img src="/static/imgs/logos/logo52.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="76561198262828662" tabindex="0">
+                            <i class="linkify icon"></i>76561198262828662</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                                <a class="ui tiny grey label"><i class="bomb icon"></i> Mines</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette crash">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://csgotrinity.com/referrals"
+                                target="_blank">CSGO Trinity</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgotrinity.com/referrals" target="_blank">
+                            <img src="/static/imgs/logos/logo53.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny red label"><i class="line chart icon"></i> Crash</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot cases coin rps">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.20</span>
+                            <a class="name header right floated" href="http://csgoldroulette.net/roulette"
+                                target="_blank">CSGOLD Roulette</a>
+                        </div>
+                        <a class="ui fluid image" href="http://csgoldroulette.net/roulette" target="_blank">
+                            <img src="/static/imgs/logos/logo54.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>1.00</span>
+                            <a class="name header right floated" href="https://casejump.com/" target="_blank">Case
+                                Jump</a>
+                        </div>
+                        <a class="ui fluid image" href="https://casejump.com/" target="_blank">
+                            <img src="/static/imgs/logos/logo55.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://omgdrop.com?bro=60906"
+                                target="_blank">OMGDrop</a>
+                        </div>
+                        <a class="ui fluid image" href="https://omgdrop.com?bro=60906" target="_blank">
+                            <img src="/static/imgs/logos/logo56.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="60906" tabindex="0"><i
+                                class="linkify icon"></i>60906</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>5.00</span>
+                            <a class="name header right floated" href="https://csgoblocks.com/" target="_blank">CSGO
+                                Blocks</a>
+                        </div>
+                        <a class="ui fluid image" href="https://csgoblocks.com/" target="_blank">
+                            <img src="/static/imgs/logos/logo57.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette jackpot cases coin rps">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="https://chefcases.com/cases"
+                                target="_blank">Chefcases</a>
+                        </div>
+                        <a class="ui fluid image" href="https://chefcases.com/cases" target="_blank">
+                            <img src="/static/imgs/logos/logo59.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item roulette">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://dotax2.com/" target="_blank">Dotax2</a>
+                        </div>
+                        <a class="ui fluid image" href="http://dotax2.com/" target="_blank">
+                            <img src="/static/imgs/logos/logo60.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny red label"><i class="life ring icon"></i> Roulette</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item scratch cases">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>0.50</span>
+                            <a class="name header right floated" href="http://topcscard.com/p/CSGOCodes"
+                                target="_blank">TOPCSCARD</a>
+                        </div>
+                        <a class="ui fluid image" href="http://topcscard.com/p/CSGOCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo61.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CSGOCodes" tabindex="0"><i
+                                class="linkify icon"></i>CSGOCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny olive label"><i class="ticket icon"></i> Scratch Cards</a>
+                                <a class="ui tiny yellow label"><i class="suitcase icon"></i> Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui fluid card element-item jackpot coin">
+                        <div class="extra content">
+                            <span class="number ui green ribbon label"><i class="dollar icon"></i>1.00</span>
+                            <a class="name header right floated" href="http://www.CSGO-Swag.com/?code=CCodes"
+                                target="_blank">CSGO Swag</a>
+                        </div>
+                        <a class="ui fluid image" href="http://www.CSGO-Swag.com/?code=CCodes" target="_blank">
+                            <img src="/static/imgs/logos/logo62.png">
+                        </a>
+                        <div class="btn ui green attached button" data-clipboard-text="CCodes" tabindex="0"><i
+                                class="linkify icon"></i>CCodes</div>
+                        <div class="extra content">
+                            <div class="meta">
+                                <a class="ui tiny green label"><i class="money icon"></i> Jackpot</a>
+                                <a class="ui tiny blue label"><i class="circle icon"></i> Coin Flip</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"
+        integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-3.2.0.min.js"><\/script>')
+    </script>
+    <script src="/dist/clipboard.min.js"></script>
+    <script src="/static/js/semantic.js"></script>
+    <script src="/static/js/plugins.js"></script>
+    <script src="/static/js/bg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

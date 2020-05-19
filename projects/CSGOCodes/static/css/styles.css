@@ -1,0 +1,105 @@
+/* -----------------------------------------------------------------------------
+Author : Roshin Jose
+Email  : roshinjose1@gmail.com
+Phone  : +91 964 522 8131
+Web : roshinjose.com
+Git Repository : git@github.com:Roshinjose167/apt.git
+----------------------------------------------------------------------------- */
+
+/* ----------------------------------
+   Base styles: opinionated defaults
+   ---------------------------------- */
+
+body { background-color: #1C262A}
+
+/*Particles Style*/
+#particles-js {
+    position: fixed;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+}
+
+/*TOP BAR*/
+        .top_bar {
+            background-color: #182024;
+            width: 100%;
+            height: 20px;
+            position: relative;
+            z-index: 100;
+        }
+        
+        /*Semantic UI Dark Cards*/
+        .ui.card,
+        .ui.cards>.card {
+            width: 212px;
+            background: #182024;
+            box-shadow: 0 1px 3px 0 #0E0E0E, 0 0 0 1px #111619;
+        }
+        
+        .ui.card .meta,
+        .ui.cards>.card .meta {
+            color: rgba(230, 230, 230, 0.4);
+        }
+        
+        .ui.card>.content>.header,
+        .ui.cards>.card>.content>a.header,
+        .ui.card>.content>a.header {
+            color: white;
+        }
+        
+        .ui.cards>.card>.content>.header:not(.ui),
+        .ui.card>.content>.header:not(.ui) {
+            font-size: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .ui.card .meta>a:not(.ui),
+        .ui.cards>.card .meta>a:not(.ui) {
+            color: rgba(195, 195, 195, 0.4);
+        }
+        
+        .ui.card>.content>.description,
+        .ui.cards>.card>.content>.description {
+            color: rgba(255, 255, 255, 0.75);
+        }
+        
+        .ui.card>.extra,
+        .ui.cards>.card>.extra {
+            color: rgba(255, 255, 255, 0.4);
+            background: #3C3C3C;
+        }
+        
+        .ui.cards a.card:hover,
+        .ui.link.card:hover,
+        .ui.link.cards .card:hover,
+        a.ui.card:hover {
+            background: #111619;
+            box-shadow: 0 1px 3px 0 #111619, 0 0 0 1px #111619;
+        }
+        
+        .ui.card:hover .meta>a:not(.ui),
+        .ui.cards>.card:hover .meta>a:not(.ui) {
+            color: rgba(0, 0, 0, 0.81);
+        }
+        
+        .ui.card:hover>.content>a.header,
+        .ui.cards>.card:hover>.content>a.header {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .ui.card:hover>.extra,
+        .ui.cards>.card:hover>.extra {
+            background: #0d1013;
+        }
+        
+        .ui.card>.extra,
+        .ui.cards>.card>.extra {
+            background: #111619;
+        }

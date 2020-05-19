@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mountain Gym | BMI</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="images/logo.png" height="60" class="d-inline-block align-top"
+                    alt=""><b>MOUNTAIN GYM</b></a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link js-scroll-trigger" href="bmi.html">BMI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="jumboheader" class="bg-primary text-white">
+        <div class="container text-center">
+            <h1>BMI Calculator</h1>
+            <p class="lead">Get Fit. Dont Quit.</p>
+            <button id="main" class="btn btn-light btn-lg">Calculate BMI &raquo;</button>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="container">
+
+        <div class="row">
+            <section style="padding: 0" class="mx-auto col-sm-12 text-center">
+                <br><br>
+                <div class="form-group">
+                    <label for="weight">Weight:</label>
+                    <span class="error" id="weightError">*</span>
+                    <input type="text" class="form-control" id="weight" disabled>
+                    <label for="height">Height:</label>
+                    <span class="error" id="heightError">*</span>
+                    <input type="text" class="form-control" id="height" disabled>
+                    <label for="bmiresult">BMI Result:</label>
+                    <input type="text" class="form-control" id="bmiresult" disabled>
+                    <label for="underweight">Total Underweight:</label>
+                    <input type="text" class="form-control" id="underweight" disabled>
+                    <label for="normal">Total Normal:</label>
+                    <input type="text" class="form-control" id="normal" disabled>
+                    <label for="overweight">Total Overweight:</label>
+                    <input type="text" class="form-control" id="overweight" disabled>
+                    <label for="obese">Total Obese:</label>
+                    <input type="text" class="form-control" id="obese" disabled>
+                </div>
+            </section>
+        </div>
+        <!-- /.row -->
+
+    </main>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Graham Miller 2018</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bmi.js"></script>
+
+</body>
+
+</html>

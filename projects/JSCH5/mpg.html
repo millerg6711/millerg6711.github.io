@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MPG</title>
+    <link type="text/css" rel="stylesheet" href="css/mpg.css">
+    <script src="js/mpg.js"></script>
+
+</head>
+
+<body>
+    <h4>Trip Calculator</h4>
+
+    <form id="mpgform">
+        <div class="calc">
+            <br>
+            <label for="milesDriven">Miles Driven</label>
+            <input type="text" id="milesDriven" name="milesDriven">
+            <span class="error" id="milesDrivenError"> </span>
+
+            <label for="gallonsUsed">Gallons Used</label>
+            <input type="text" id="gallonsUsed" name="gallonsUsed">
+            <span class="error" id="gallonsUsedError"> </span>
+
+            <label for="priceGallon">Price per Gallon</label>
+            <input type="text" id="priceGallon" name="priceGallon">
+            <span class="error" id="priceGallonError"> </span>
+            <div class="buttons clear">
+                <input type="button" id="btnCalc" value="Calculate">
+                <input type="button" id="btnClear" value="Clear">
+            </div>
+        </div>
+        <br>
+        <div class="output">
+            <input style="
+            width: 98.7%;
+            background-color: white;
+            border: none;
+            text-align: center;
+        "
+                type="text" id="mpg" disabled><br>
+            <input style="
+            width: 98.7%;
+            background-color: white;
+            border: none;
+            text-align: center;
+        "
+                type="text" id="cost" disabled><br>
+            <input style="
+            width: 98.7%;
+            background-color: white;
+            border: none;
+            text-align: center;
+        "
+                type="text" id="perMile" disabled><br>
+        </div>
+        <br><br><br>
+    </form>
+    <div class="bottom"></div>
+
+</body>
+
+</html>
